@@ -160,7 +160,7 @@ if(MODELS)
         ## executable and all other files in the directory are for destined for
         ## the library.
         file(GLOB SRCEXE ${CMAKE_SOURCE_DIR}/models/${MODEL}/SPheno*.f90)
-        file(GLOB_RECURSE SRCS ${CMAKE_SOURCE_DIR}/models/${MODEL}/*.f90 models/${MODEL}/*.F90)
+        file(GLOB_RECURSE SRCS ${CMAKE_SOURCE_DIR}/models/${MODEL}/*.f90 ${CMAKE_SOURCE_DIR}/models/${MODEL}/*.f ${CMAKE_SOURCE_DIR}/models/${MODEL}/*.F90)
         list(REMOVE_ITEM SRCS ${SRCEXE})
 
         add_library(${MODEL}-lib SHARED ${SRCS})
